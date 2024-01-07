@@ -24,6 +24,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -77,24 +80,82 @@
               <div class="world-group">
                 <div class="world-small-container">
                   <span>Located in</span>
-                  <div class="world-small-card">
-                    <p>Bangladesh</p>
-                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                  <div class="select-box" data-name="Ben">
+                    <div class="select-box__current" tabindex="1">
+                      <div class="select-box__value">
+                        <input class="select-box__input" type="radio" id="1" value="1" name="Ben" checked="true">
+                        <p class="select-box__input-text">Cream</p>
+                      </div>
+                      <div class="select-box__value">
+                        <input class="select-box__input" type="radio" id="2" value="2" name="Ben">
+                        <p class="select-box__input-text">Cheese</p>
+                      </div>
+                      <div class="select-box__value">
+                        <input class="select-box__input" type="radio" id="3" value="3" name="Ben">
+                        <p class="select-box__input-text">Milk</p>
+                      </div>
+                      <div class="select-box__value">
+                        <input class="select-box__input" type="radio" id="4" value="4" name="Ben">
+                        <p class="select-box__input-text">Honey</p>
+                      </div>
+                      <div class="select-box__value">
+                        <input class="select-box__input" type="radio" id="5" value="5" name="Ben">
+                        <p class="select-box__input-text">Toast</p>
+                      </div>
+                      <i class="fa fa-chevron-down select-box__icon" aria-hidden="true"></i>
+                    </div>
+                    <ul class="select-box__list">
+                      <li>
+                        <label class="select-box__option" for="1" aria-hidden>Cream</label>
+                      </li>
+                      <li>
+                        <label class="select-box__option" for="2" aria-hidden>Cheese</label>
+                      </li>
+                      <li>
+                        <label class="select-box__option" for="3" aria-hidden>Milk</label>
+                      </li>
+                      <li>
+                        <label class="select-box__option" for="4" aria-hidden>Honey</label>
+                      </li>
+                      <li>
+                        <label class="select-box__option" for="5" aria-hidden>Toast</label>
+                      </li>
+                    </ul>
                   </div>
                 </div>
                 <div class="undifined"></div>
                 <div class="world-small-container">
                   <span>Date</span>
                   <div class="world-small-card">
-                    <p>Web,7 Nov</p>
-                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                      <label for="datepicker" >
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        <input type="text" id="datepicker" autocomplete="off">
+                      </label>	
+
                   </div>
                 </div>
                 <div class="undifined"></div>
                 <div class="world-small-container">
                   <span>Prince Ranger</span>
                   <div class="world-small-card">
-                    <p>$400-$700</p>
+                    <div class="prince-wrapper">
+                      <p id="firstInputValue">$<span id="popupFirstValue1">400</span></p>
+  
+                        <!-- Popup for First Slider -->
+                        <div id="popup1" class="popup">
+                            <p>First Prince Ranger</hp>
+                            <input id="princeSlider1Popup" type="range" min="0" max="1000" value="400">
+                            <span class="popup-close" data-slider-id="princeSlider1Popup">X</span>
+                        </div>
+                        <p> - </p>
+                      <p id="secondInputValue">$<span id="popupSecondValue2">600</span></p>
+                      <!-- Popup for Second Slider -->
+                      <div id="popup2" class="popup">
+                          <p>Second Prince Ranger</hp>
+                          <input id="princeSlider2Popup" type="range" min="0" max="1000" value="600">
+                          <span class="popup-close" data-slider-id="princeSlider2Popup">X</span>
+                      </div>
+                    </div>
                     <i class="fa fa-chevron-down" aria-hidden="true"></i>
                   </div>
                 </div>
@@ -169,6 +230,13 @@
             </div>
           </div>
         </div>
+        <!-- Slider -->
+
+       
+
+<!-- Display Second Input Value -->
+
+        
         <!-- Explore all corners -->
         <div class="corners-wrapper">
           <div class="corners-group">
@@ -234,6 +302,9 @@
             </div>
           </div>
         </div>
+        
+      
+        <!-- Input field to dynamically show the selected value -->
         <!-- Explore place -->
         <div class="popular-wapper">
           <div class="popular-container">
@@ -455,5 +526,6 @@
     </div>
 
     <script src="script.js"></script>
+   
   </body>
 </html>
