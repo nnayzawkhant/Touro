@@ -349,12 +349,19 @@ header {
     background: #fff;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    overflow: hidden;
 }
 
 .popular-location-container img{
     width: 100%;
     aspect-ratio: 16/12;
     border-radius: 5px;
+    overflow: hidden;
+}
+
+.popular-location-container img:hover{
+    scale: 1.1;
+    transition: all 0.5s;
 }
 
 .location-place{
@@ -515,6 +522,11 @@ ul .view button{
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     font-size: 20px;
     border-radius: 6px;
+}
+
+.corners-flight a i:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition:all 0.5s;
 }
 
 .corners-flight a p{
@@ -778,6 +790,9 @@ ul .view button{
     color: rgba(249, 131, 40, 0.953);
 }
 
+.view-all{
+    display: none;
+}
 
 /* Responsive */
 
